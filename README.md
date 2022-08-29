@@ -111,7 +111,14 @@ archivePrefix = {arXiv},
 }
 
 
-
+@software{Vajpeyi_HR_Diagrams_past_2022,
+author = {Vajpeyi, Avi},
+month = {8},
+title = {{HR Diagrams (past to present)}},
+url = {https://github.com/avivajpeyi/hr_diagram_past_to_present},
+version = {0.0.1},
+year = {2022}
+}
 
 
 
