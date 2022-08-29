@@ -1,0 +1,69 @@
+### FIGURE
+figure.facecolor: white
+figure.dpi: 500
+savefig.bbox: tight
+
+### LINES
+lines.linewidth: 1.5
+
+### PATCHES
+patch.facecolor: 0072B2
+
+
+### TICKS
+xtick.direction: in      # direction: {in, out, inout}
+xtick.top: True    # draw ticks on the top side
+xtick.bottom: True    # draw ticks on the bottom side
+xtick.minor.visible: False    # visibility of minor ticks on x-axis
+xtick.major.top: True    # draw x axis top major ticks
+xtick.major.bottom: True    # draw x axis bottom major ticks
+xtick.minor.top: False   # draw x axis top minor ticks
+xtick.minor.bottom: False    # draw x axis bottom minor ticks
+ytick.direction: in      # direction: {in, out, inout}
+ytick.left: True    # draw ticks on the top side
+ytick.right: True    # draw ticks on the bottom side
+ytick.minor.visible: False    # visibility of minor ticks on y-axis
+ytick.major.left: True    # draw y axis left major ticks
+ytick.major.right: True    # draw y axis right major ticks
+ytick.minor.left: False    # draw y axis left minor ticks
+ytick.minor.right: False    # draw y axis right minor ticks
+
+### AXES SPLINE+TICK LINEWITH SETTINGS
+xtick.major.size: 6       # major tick size in points
+xtick.minor.size: 3     # minor tick size in points
+xtick.major.width: 0.8     # major tick width in points
+xtick.minor.width: 0.6     # minor tick width in points
+ytick.major.size: 6    # major tick size in points
+ytick.minor.size: 3    # minor tick size in points
+ytick.major.width: 0.8     # major tick width in points
+ytick.minor.width: 0.6     # minor tick width in points
+axes.linewidth: 0.8
+
+
+
+
+
+### AXES
+axes.grid: False
+axes.labelpad: 10
+axes.edgecolor: black
+axes.facecolor: white
+axes.spines.top: True
+axes.spines.right: True
+axes.spines.bottom: True
+axes.spines.left: True
+axes.prop_cycle: cycler('color', ['0072B2', '009E73', 'D55E00', 'CC79A7', 'F0E442', '56B4E9'])
+
+
+### FONTS
+font.family: serif
+font.weight: normal
+font.size: 20
+text.usetex: True
+
+
+### LABEL SIZES
+axes.labelsize: 20    # fontsize of the x any y labels
+ytick.labelsize: 15  # font size of the tick labels
+xtick.labelsize: 15  # font size of the tick labels
+legend.fontsize: large
