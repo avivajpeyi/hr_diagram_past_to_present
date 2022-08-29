@@ -1,6 +1,10 @@
 # HR Diagram (1914 vs 2022)
 
-Here we get dat for and generate HR diagrams for the data avail in 1914 vs all the data avail now in 2022.
+![https://raw.githubusercontent.com/avivajpeyi/hr_diagram_past_to_present/master/src/hr_diagram.png](https://raw.githubusercontent.com/avivajpeyi/hr_diagram_past_to_present/master/src/hr_diagram.png)
+
+
+
+Here we get data for and generate HR diagrams for (a) 1914 original HR diagram, (b) 1993 HR diagram with [HYG] catlog data and (c) 2022 HR diagram with Gaia DR3 data .
 
 
 
@@ -19,12 +23,13 @@ We get the 2022 data from:
 > http://cdn.gea.esac.esa.int/Gaia/gedr3/gaia_source/
 
 
-
+We get the 1993 data from:
+> All stars in Hipparcos, Yale Bright Star, and Gliese catalogs (almost 120,000 stars)
 
 ## BIB
 
 ```
-@article{smith2021hertzsprung,
+@article{1914_HR_data,
   title={A Hertzsprung-Russell diagram for the nineteenth century},
   author={Smith, Graeme H},
   journal={Astrophysics and Space Science},
@@ -36,7 +41,40 @@ We get the 2022 data from:
 }
 
 
-@ARTICLE{GaiaCollaboration:2016:A&A,
+@ARTICLE{HIPPARCOS,
+       author = {{Perryman}, M.~A.~C. and {Lindegren}, L. and {Kovalevsky}, J. and {Hoeg}, E. and {Bastian}, U. and {Bernacca}, P.~L. and {Cr{\'e}z{\'e}}, M. and {Donati}, F. and {Grenon}, M. and {Grewing}, M. and {van Leeuwen}, F. and {van der Marel}, H. and {Mignard}, F. and {Murray}, C.~A. and {Le Poole}, R.~S. and {Schrijver}, H. and {Turon}, C. and {Arenou}, F. and {Froeschl{\'e}}, M. and {Petersen}, C.~S. and et al.},
+        title = "{The HIPPARCOS Catalogue}",
+      journal = {\aap},
+         year = 1997,
+        month = jul,
+       volume = {323},
+        pages = {L49-L52},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/1997A&A...323L..49P},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@article{gliese1969catalogue,
+  title={Catalogue of Nearby Stars. Edition 1969},
+  author={Gliese, W},
+  journal={Veroeffentlichungen des Astronomischen Rechen-Instituts Heidelberg},
+  volume={22},
+  pages={1},
+  year={1969}
+}
+
+
+@article{yalebrightcatalog,
+  title={The bright star catalogue},
+  author={Hoffleit, Dorrit and Warren Jr, WH},
+  journal={Astronomical Data Center Bulletin},
+  volume={1},
+  number={4},
+  pages={285--294},
+  year={1987}
+}
+
+@ARTICLE{GaiaMission,
        author = {{Gaia Collaboration} and {Prusti}, T. and {de Bruijne}, J.~H.~J. and {Brown}, A.~G.~A. and {Vallenari}, A. and {Babusiaux}, C. and {Bailer-Jones}, C.~A.~L. and {Bastian}, U. and {Biermann}, M. and {Evans}, D.~W. and {Eyer}, L. and {Jansen}, F. and {Jordi}, C. and {Klioner}, S.~A. and {Lammers}, U. and {Lindegren}, L. and {Luri}, X. and {Mignard}, F. and {Milligan}, D.~J. and {Panem}, C. and et al.},
         title = "{The Gaia mission}",
       journal = {\aap},
@@ -54,7 +92,7 @@ archivePrefix = {arXiv},
       adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
 
-@ARTICLE{GaiaCollaboration:2021:A&A,
+@ARTICLE{GaiaEDR3,
        author = {{Gaia Collaboration} and {Brown}, A.~G.~A. and {Vallenari}, A. and {Prusti}, T. and {de Bruijne}, J.~H.~J. and {Babusiaux}, C. and {Biermann}, M. and {Creevey}, O.~L. and {Evans}, D.~W. and {Eyer}, L. and {Hutton}, A. and {Jansen}, F. and {Jordi}, C. and {Klioner}, S.~A. and {Lammers}, U. and {Lindegren}, L. and {Luri}, X. and {Mignard}, F. and {Panem}, C. and {Pourbaix}, D. and et al.},
         title = "{Gaia Early Data Release 3. Summary of the contents and survey properties}",
       journal = {\aap},
@@ -69,11 +107,14 @@ archivePrefix = {arXiv},
        eprint = {2012.01533},
  primaryClass = {astro-ph.GA},
        adsurl = {https://ui.adsabs.harvard.edu/abs/2021A&A...649A...1G},
-      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System -- DR3 paper still in prep}
 }
 
 
 
 
 
+
 ```
+
+[HYG]: https://github.com/astronexus/HYG-Database
