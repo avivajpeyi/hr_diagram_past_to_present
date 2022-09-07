@@ -2,9 +2,7 @@
 
 ![https://raw.githubusercontent.com/avivajpeyi/hr_diagram_past_to_present/master/src/hr_diagram.png](https://raw.githubusercontent.com/avivajpeyi/hr_diagram_past_to_present/master/src/hr_diagram.png)
 
-
-
-Obserational HR diagrams for (a) 1914 original HR diagram, (b) 1993 HR diagram with [HYG] catlog data and (c) 2022 HR diagram with Gaia DR3 data .
+Inspired by Will Far's GW talk, here are some obserational HR diagrams for (a) 1914 original HR diagram, (b) 1993 HR diagram with [HYG] catlog data and (c) 2022 HR diagram with Gaia DR3 data .
 
 
 
