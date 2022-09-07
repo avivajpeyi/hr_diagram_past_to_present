@@ -1,4 +1,4 @@
-# Observational HR Diagram (1914 vs 2022)
+# Observational HR Diagrams (1914, 1993, 2022)
 
 ![https://raw.githubusercontent.com/avivajpeyi/hr_diagram_past_to_present/master/src/hr_diagram.png](https://raw.githubusercontent.com/avivajpeyi/hr_diagram_past_to_present/master/src/hr_diagram.png)
 
