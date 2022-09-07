@@ -1,10 +1,10 @@
-# HR Diagram (1914 vs 2022)
+# Observational HR Diagram (1914 vs 2022)
 
 ![https://raw.githubusercontent.com/avivajpeyi/hr_diagram_past_to_present/master/src/hr_diagram.png](https://raw.githubusercontent.com/avivajpeyi/hr_diagram_past_to_present/master/src/hr_diagram.png)
 
 
 
-Here we get data for and generate HR diagrams for (a) 1914 original HR diagram, (b) 1993 HR diagram with [HYG] catlog data and (c) 2022 HR diagram with Gaia DR3 data .
+Obserational HR diagrams for (a) 1914 original HR diagram, (b) 1993 HR diagram with [HYG] catlog data and (c) 2022 HR diagram with Gaia DR3 data .
 
 
 
@@ -13,6 +13,12 @@ We get the 1914 data from:
 > Smith, Graeme H. "A Hertzsprung-Russell diagram for the nineteenth century." Astrophysics and Space > Science 366.12 (2021): 1-18.
 >
 > https://link.springer.com/article/10.1007/s10509-021-04024-3
+
+
+We get the 1993 data from:
+> All stars in Hipparcos, Yale Bright Star, and Gliese catalogs (almost 120,000 stars)
+> 
+> http://www.astronexus.com/hyg
 
 We get the 2022 data from:
 
@@ -23,8 +29,7 @@ We get the 2022 data from:
 > http://cdn.gea.esac.esa.int/Gaia/gedr3/gaia_source/
 
 
-We get the 1993 data from:
-> All stars in Hipparcos, Yale Bright Star, and Gliese catalogs (almost 120,000 stars)
+
 
 ## BIB
 
