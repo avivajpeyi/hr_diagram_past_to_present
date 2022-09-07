@@ -47,6 +47,7 @@ def add_1914_annotations(ax):
 
 
 def load_gaia_data():
+    """Inspired by https://github.com/m0zjo-code/Gaia_HR_Plot/blob/main/gaia_HR_plot.py"""
     i = 0
     step = 50 
     while i < 500:
