@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
+# +
 # %load_ext jupyternotify
 
-# +
 import pandas as pd
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -11,13 +11,13 @@ import numpy as np
 import os
 from matplotlib import colors
 import glob 
+from string import ascii_lowercase as letters 
  
 from scipy.interpolate import interp1d
 from scipy.ndimage import gaussian_filter1d
 
 plt.style.use("plot.mplstyle")
 pd.set_option('display.max_columns', 500) 
-
 
 
 def add_hyg_annotations(ax):
@@ -160,6 +160,7 @@ def make_hr_diagram(ax, data, l="", c='k', alpha=0.05, zorder=0, diff_xargs=Fals
         norm = colors.PowerNorm(0.5, vmin=0, vmax=20000)
         h = ax.hist2d(x, y, bins=300, cmin=50, norm=norm, zorder=zorder+0.5, cmap='hot', antialiased=True)
         if show_colorbar:
+            fig = plt.gcf()
             cb = fig.colorbar(h[3], ax=ax, pad=0.02)
             cb.set_label(r"$\mathrm{Stellar~density}$", labelpad=-25)
             cb.set_ticks([0, 100, 20000])
@@ -195,39 +196,38 @@ def mag_to_absmag(Vmag, Plx):
 def bv_to_temp(bv):
     return 4600 * (1/(0.92 * bv + 1.7) + 1/(0.92 * bv + 0.62)) #Ballesteros formula
 
-
+def plot_hr(datasets=list(DATA.keys()), fname="hr_diagram.png"):
+    num = len(datasets)
+    data = {k:DATA[k] for k in datasets}
+    fig, axes = plt.subplots(1,num,  figsize=(4*num, 5), sharey=True)
+    subplot_idx = 0
+    for (k, d), ax in zip(data.items(), axes):
+        l = f"{letters[subplot_idx]})"
+        if k == "1914":
+            make_hr_diagram(ax, d,alpha=1,  l=l,  diff_xargs=True, show_ylab=True)
+            add_1914_annotations(ax)
+        elif k == "hip":
+            make_hr_diagram(ax, d, l=l, diff_xargs=True, alpha=0.1)
+            add_hip_annotations(ax)
+        elif k == "hyg":
+            make_hr_diagram(ax, d, l=l, diff_xargs=True, alpha=0.1)
+            add_hyg_annotations(ax)
+        elif k == "gaia":
+            make_hr_diagram(ax, d, l=l, show_colorbar=True)
+        subplot_idx += 1
+    
+    if 'hyg' not in datasets:  
+        for ax in axes:
+            ax.set_ylim(17.5, -5)
+    fig.subplots_adjust(wspace=0, hspace=0)
+    plt.savefig(fname, dpi=300)
 
 DATA = { "1914":load_1914_data(), 'hyg': load_hyg_data(), 'hip':load_hip_data(), 'gaia':load_gaia_data()}
 
 # -
 
-def plot_hr(datasets=list(DATA.keys()), fname="hr_diagram.png"):
-    num = len(datasets)
-    data = {k:DATA[k] for k in datasets}
-    fig, axes = plt.subplots(1,num,  figsize=(4*num, 5), sharey=True)
-    
-    for (k, d), ax in zip(data.items(), axes):
-        if k == "1914":
-            make_hr_diagram(ax, d,alpha=1,  l="a)",  diff_xargs=True, show_ylab=True)
-            add_1914_annotations(ax)
-        elif k == "hip":
-            make_hr_diagram(ax, d, l="b)", diff_xargs=True, alpha=0.1)
-            add_hip_annotations(ax)
-        elif k == "hyg":
-            make_hr_diagram(ax, d, l="bi)", diff_xargs=True, alpha=0.1)
-            add_hyg_annotations(ax)
-        elif k == "gaia":
-            make_hr_diagram(ax, d, l="c)", show_colorbar=True)
-    
-    
-    if 'hyg' not in datasets:  
-        for ax in axes:
-            ax.set_ylim(17.5, -5)
-    plt.tight_layout()
-    plt.savefig(fname, dpi=300)
-
 # %%notify
 plot_hr(datasets=['1914','hip', 'gaia'], fname="hr_diagram.png")
 
 # %%notify
-plot_hr(datasets=['1914','hip', 'hyg', 'gaia'], fname="hr_diagram_all.png")
+plot_hr(datasets=['1914', 'hyg', 'gaia'], fname="hr_diagram_all.png")

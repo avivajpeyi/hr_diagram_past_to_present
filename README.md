@@ -1,10 +1,16 @@
+<!-- #region -->
 # Observational HR Diagrams (1914, 1993, 2022)
 
-![https://raw.githubusercontent.com/avivajpeyi/hr_diagram_past_to_present/master/src/hr_diagram.png](https://raw.githubusercontent.com/avivajpeyi/hr_diagram_past_to_present/master/src/hr_diagram.png)
+![](https://raw.githubusercontent.com/avivajpeyi/hr_diagram_past_to_present/master/src/hr_diagram_all.png)
 
 Inspired by Will Far's GW talk, here are some obserational HR diagrams for (a) 1914 original HR diagram, (b) 1993 HR diagram with [HYG] catlog data and (c) 2022 HR diagram with Gaia DR3 data .
 
 
+
+![](https://raw.githubusercontent.com/avivajpeyi/hr_diagram_past_to_present/master/src/hr_diagram.png)
+
+The second version does not include the Yale Bright Star or Gliese catalogs in panel (b)
+<!-- #endregion -->
 
 We get the 1914 data from:
 
