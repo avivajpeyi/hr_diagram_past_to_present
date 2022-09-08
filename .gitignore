@@ -3,4 +3,6 @@ gaia*.csv
 *.DS_Store
 .ipynb_checkpoints
 __pycache__
+*.zip
+*hyg*
 src/data/hip.tsv
